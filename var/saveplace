@@ -2,8 +2,8 @@
 (("/"
   (dired-filename . "/User Guides And Information"))
  ("/Users/LooChao/" . 1748)
- ("/Users/LooChao/.breadcrumb" . 344)
- ("/Users/LooChao/.ido.last" . 7557)
+ ("/Users/LooChao/.breadcrumb" . 345)
+ ("/Users/LooChao/.ido.last" . 8577)
  ("/Users/LooChao/.spacemacs" . 12938)
  ("/Users/LooChao/.vagrant.d/data/machine-index/index" . 189)
  ("/Users/LooChao/.wine/dosdevices/z:/Volumes/DATA/Dropbox/Personal/Pharmaseq/passwd.txt" . 7)
@@ -17,10 +17,6 @@
  ("/Users/LooChao/Dropbox/.emacs.d/bin/shell/docker-spacemacs.bash" . 820)
  ("/Users/LooChao/Dropbox/.emacs.d/elpa/"
   (dired-filename . "/Users/LooChao/Dropbox/.emacs.d/elpa/evil"))
- ("/Users/LooChao/Dropbox/.emacs.d/elpa/archives/ELPA/archive-contents" . 11669)
- ("/Users/LooChao/Dropbox/.emacs.d/elpa/archives/gnu/archive-contents" . 27834)
- ("/Users/LooChao/Dropbox/.emacs.d/elpa/archives/melpa/archive-contents" . 499734)
- ("/Users/LooChao/Dropbox/.emacs.d/elpa/archives/org/archive-contents" . 185)
  ("/Users/LooChao/Dropbox/.emacs.d/elpa/color-theme-20080305.34/color-theme-autoloads.el" . 4990)
  ("/Users/LooChao/Dropbox/.emacs.d/elpa/color-theme-solarized-20160219.924/color-theme-solarized-autoloads.el" . 1538)
  ("/Users/LooChao/Dropbox/.emacs.d/elpa/color-theme-solarized-20160219.924/color-theme-solarized.el" . 1758)
@@ -48,7 +44,7 @@
  ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-powerline-theme.el" . 4727)
  ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-ui.el" . 11799)
  ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-util.el" . 6088)
- ("/Users/LooChao/Dropbox/.emacs.d/var/emacs.recentf" . 1856)
+ ("/Users/LooChao/Dropbox/.emacs.d/var/emacs.recentf" . 345)
  ("/Users/LooChao/Dropbox/.emacs.d/var/emms/emms-history" . 158)
  ("/Users/LooChao/Dropbox/.emacs.dz/"
   (dired-filename . "/Users/LooChao/Dropbox/.emacs.dz/spacemacs"))
