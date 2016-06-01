@@ -1,0 +1,44 @@
+#-*- mode:sh -*-
+
+#== OS X ==#
+# Get rid of those pesky .DS_Store files recursively
+alias dstore-clean='find . -type f -name .DS_Store -print0 | xargs -0 rm'
+
+# Track who is listening to your iTunes music
+alias whotunes='lsof -r 2 -n -P -F n -c iTunes -a -i TCP@`hostname`:3689'
+
+alias ec='emacsclient -n'
+
+alias ga='git add'
+alias gp='git push'
+alias gl='git log'
+alias gs='git status'
+alias gd='git diff'
+alias gm='git commit -m'
+alias gma='git commit -am'
+alias gb='git branch'
+alias gc='git checkout'
+alias gra='git remote add'
+alias grr='git remote rm'
+alias gpu='git pull'
+alias gcl='git clone'
+alias gta='git tag -a -m'
+alias gf='git reflog'
+
+alias v='vagrant'
+alias vbl='vagrant box list'
+alias vd='vagrant destroy'
+alias vg='vagrant global-status'
+alias vr='vagrant rsync-auto'
+alias vs='vagrant ssh'
+alias vu='vagrant up'
+alias vh='vagrant halt'
+
+osxs='~/Dropbox/.emacs.d/etc/_osx.sh'
+alias osx="sh $osxs"
+
+alias spacemacs='bash /Users/LooChao/Dropbox/.emacs.d/bin/shell/docker-spacemacs.bash'
+
+emacs="/Applications/Documents/Emacs.app/Contents/MacOS/Emacs"
+alias emacs_debug="$emacs --debug-init"
+alias emacs_compile="$emacs -batch -f batch-byte-compile ~/Dropbox/.emacs.d/rc/*.el"
