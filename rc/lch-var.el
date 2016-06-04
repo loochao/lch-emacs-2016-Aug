@@ -31,6 +31,10 @@
 ;; (setq recentf-save-file (concat emacs-var-dir "/emacs-recentf"))             ;=> lch-org.el
 ;; (setq ido-save-directory-list-file (concat emacs-var-dir "/emacs-ido-last")) ;=> lch-elisp.el
 
+(setq bc-bookmark-file (concat emacs-var-dir "/breadcrumb"))
+
+(setq tramp-persistency-file-name (concat emacs-var-dir "/tramp"))
+
 (setq auto-mode-alist
       (append '(
                 ("\\.\\(diffs?\\|patch\\|rej\\)\\'"    . diff-mode)

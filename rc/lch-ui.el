@@ -96,8 +96,9 @@
   ;; (set-frame-font "Lucida Console-14")
   ;; (set-frame-font "courier-14")
   )
-;; (if lch-mac-p (set-default-font "Monaco New:pixelsize=18"))
-
+(if lch-mac-p (set-default-font "Monaco-18"))
+;; This will also work
+;; (set-default-font "Monaco:pixelsize=16")
 ;;; Tabbar
 (require 'tabbar)
 (tabbar-mode 1)

@@ -1,3 +1,4 @@
+*** Never do a push from NT, the owner properties will be messed up
 *** mac-print-buffer
 [2014-12-26 Fri]
 Get mac-print-mode.el and put it on your LoadPath.

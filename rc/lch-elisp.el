@@ -160,55 +160,95 @@
 ;; (global-set-key "\C-cep" 'evernote-post-region)
 ;; (global-set-key "\C-ceb" 'evernote-browser)
 
-;;; Whitespace-mode
-;; Whitespace Mode lets you do a couple of neat things, reporting issues,
-;; and fixing them.
-(require 'whitespace)
-;; (diminish 'whitespace-mode " ᗣ")
-(lch-diminish whitespace-mode " Ⓦ" " W")
-;; (diminish 'global-whitespace-mode " ᗣ")
-;; (add-hook 'before-save-hook 'whitespace-cleanup)
+;;; Yasnippet
+(require 'yasnippet)
+(lch-diminish yas-minor-mode " Ⓨ" " Y")
+(defvar snippet-root-dir (concat emacs-lib-dir "/snippets") "")
 
-;;; Switch-window
-(require 'switch-window)
-;;; mac-print
+;; Order matters, put lch at last to overwrite others' conf if there's name
+;; conflict.
+(defvar andrea-snippet-dir (concat snippet-root-dir "/AndreaCrotti") "")
+(defvar rejeep-snippet-dir (concat snippet-root-dir "/rejeep") "")
+(defvar lch-snippet-dir (concat snippet-root-dir "/lch") "")
+(defvar ocodo-snippet-dir (concat snippet-root-dir "/ocodo") "")
 
-(when (require 'mac-print-mode nil t)
-  (mac-print-mode 1)
-  (global-set-key (kbd "<f1> p") 'mac-print-buffer))
+(add-to-list 'yas-snippet-dirs rejeep-snippet-dir)
+(add-to-list 'yas-snippet-dirs andrea-snippet-dir)
+(add-to-list 'yas-snippet-dirs lch-snippet-dir)
+(add-to-list 'yas-snippet-dirs ocodo-snippet-dir)
 
-;; Needed since mac-print will require htmlize
-;; But htmlize won't work without code below.
-(eval-after-load 'htmlize
-  '(progn
-     ;; make htmlize to handle face name strings as well
-     (defadvice htmlize-attrlist-to-fstruct (around my-make-it-accept-string activate)
-       (if (stringp (ad-get-arg 0))
-           (progn
-             (setq ad-return-value (htmlize-face-to-fstruct (intern (ad-get-arg 0)))))
-         ad-do-it))))
+(yas-global-mode 1)
+;; has to disable under term-mode to make <tab> work.
+(defun lch-force-yasnippet-off ()
+  (yas-minor-mode -1)
+  (setq yas-dont-activate t))
+(add-hook 'lch-force-yasnippet-off
+              '(term-mode-hook shell-mode-hook))
+;; (add-hook 'term-mode-hook (lambda () (yas-minor-mode -1)))
 
-(defvar my-htmlize-off-modes nil
-  "list of minor modes to disable when using htmlize")
+(defun lch-reload-snippets ()
+  (interactive)
+  (dolist (x yas-snippet-dirs)
+    (when (file-exists-p x)
+      (yas-load-directory x))))
 
-(defun my-htmlize-before-hook-default ()
-  (dolist (mode my-htmlize-off-modes)
-    (if (fboundp mode)
-        (funcall mode 0)))
+;; Better disable <tab>, otherwise conflict with terminal.
+;; (define-key yas-minor-mode-map [(tab)] nil)
+;; (define-key yas-minor-mode-map (kbd "TAB") nil)
+(define-key yas-minor-mode-map (kbd "M-'") 'yas-expand)
 
-  (font-lock-fontify-buffer)
-  (jit-lock-fontify-now)
+;;; iDo
+(ido-mode t)
+(define-key global-map (kbd "C-x b") 'ido-switch-buffer)
 
-  ;; copied from font-lock-default-function (make font-lock-face property act as alias for face property)
-  (set (make-local-variable 'char-property-alias-alist)
-       (copy-tree char-property-alias-alist))
-  (let ((elt (assq 'face char-property-alias-alist)))
-    (if elt
-        (unless (memq 'font-lock-face (cdr elt))
-          (setcdr elt (nconc (cdr elt) (list 'font-lock-face))))
-      (push (list 'face 'font-lock-face) char-property-alias-alist))))
+;; Ignore .DS_Store files with ido mode
+(add-to-list 'ido-ignore-files "\\.DS_Store")
+(setq ido-save-directory-list-file (concat emacs-var-dir "/emacs-ido-last"))
 
-(add-hook 'htmlize-before-hook 'my-htmlize-before-hook-default)
+;;; Goto-last-change
+(require 'goto-chg)
+(define-key global-map (kbd "C-x C-\\") 'goto-last-change)
+(define-key global-map (kbd "<f4> <f4>") 'goto-last-change)
+(define-key global-map (kbd "<f4> <f5>") 'goto-last-change-reverse)
+
+;;; Auto-complete
+;; Disable it usually, for it's slow and distracting.
+;; Try dabbrev-expand (M-/)
+;; (require 'auto-complete)
+;; (require 'auto-complete-config)
+;; (require 'lch-key-util)
+;; (ac-config-default)
+;; (ac-flyspell-workaround)
+;; (add-to-list 'ac-dictionary-directories (concat emacs-var-dir "/auto-complete-dict"))
+;; (setq ac-comphist-file  (concat emacs-var-dir "/ac-comphist.dat"))
+
+;; (global-auto-complete-mode t)
+;; (setq ac-auto-show-menu t)
+;; (setq ac-dwim t)
+;; (setq ac-use-menu-map t)
+;; (setq ac-quick-help-delay 1)
+;; (setq ac-quick-help-height 60)
+;; (setq ac-disable-inline t)
+;; (setq ac-show-menu-immediately-on-auto-complete t)
+;; (setq ac-auto-start 2)
+;; (setq ac-candidate-menu-min 0)
+
+;; (set-default 'ac-sources
+;;              '(ac-source-dictionary
+;;                ac-source-words-in-buffer
+;;                ac-source-words-in-same-mode-buffers
+;;                ac-source-semantic
+;;                ac-source-yasnippet))
+
+;; (dolist (mode '(org-mode text-mode lisp-mode markdown-mode))
+;;   (add-to-list 'ac-modes mode))
+
+;; Key triggers
+;; (define-key ac-completing-map (kbd "M-.") 'ac-next)
+;; (define-key ac-completing-map (kbd "M-,") 'ac-previous)
+;; (define-key ac-completing-map "\t" 'ac-complete)
+;; (define-key ac-completing-map (kbd "M-RET") 'ac-help)
+;; (define-key ac-completing-map "\r" 'nil)
 
 ;;; AppleScript-mode
 ;; (autoload 'applescript-mode "applescript-mode"
@@ -687,22 +727,60 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
-;;; iDo
-(ido-mode t)
-(define-key global-map (kbd "C-x b") 'ido-switch-buffer)
 
-;; Ignore .DS_Store files with ido mode
-(add-to-list 'ido-ignore-files "\\.DS_Store")
+;;; Whitespace-mode
+;; Whitespace Mode lets you do a couple of neat things, reporting issues,
+;; and fixing them.
+(require 'whitespace)
+;; (diminish 'whitespace-mode " ᗣ")
+(lch-diminish whitespace-mode " Ⓦ" " W")
+;; (diminish 'global-whitespace-mode " ᗣ")
+;; (add-hook 'before-save-hook 'whitespace-cleanup)
 
-;;; Goto-last-change
-(require 'goto-chg)
-(define-key global-map (kbd "C-x C-\\") 'goto-last-change)
-(define-key global-map (kbd "<f4> <f4>") 'goto-last-change)
-(define-key global-map (kbd "<f4> <f5>") 'goto-last-change-reverse)
+;;; Switch-window
+(require 'switch-window)
+
+;;; mac-print
+(when (require 'mac-print-mode nil t)
+  (mac-print-mode 1)
+  (global-set-key (kbd "<f1> p") 'mac-print-buffer))
+
+;; Needed since mac-print will require htmlize
+;; But htmlize won't work without code below.
+(eval-after-load 'htmlize
+  '(progn
+     ;; make htmlize to handle face name strings as well
+     (defadvice htmlize-attrlist-to-fstruct (around my-make-it-accept-string activate)
+       (if (stringp (ad-get-arg 0))
+           (progn
+             (setq ad-return-value (htmlize-face-to-fstruct (intern (ad-get-arg 0)))))
+         ad-do-it))))
+
+(defvar my-htmlize-off-modes nil
+  "list of minor modes to disable when using htmlize")
+
+(defun my-htmlize-before-hook-default ()
+  (dolist (mode my-htmlize-off-modes)
+    (if (fboundp mode)
+        (funcall mode 0)))
+
+  (font-lock-fontify-buffer)
+  (jit-lock-fontify-now)
+
+  ;; copied from font-lock-default-function (make font-lock-face property act as alias for face property)
+  (set (make-local-variable 'char-property-alias-alist)
+       (copy-tree char-property-alias-alist))
+  (let ((elt (assq 'face char-property-alias-alist)))
+    (if elt
+        (unless (memq 'font-lock-face (cdr elt))
+          (setcdr elt (nconc (cdr elt) (list 'font-lock-face))))
+      (push (list 'face 'font-lock-face) char-property-alias-alist))))
+
+(add-hook 'htmlize-before-hook 'my-htmlize-before-hook-default)
+
 ;;; Desktop
 ;; Part of GNU Emacs
 (require 'desktop)
-
 (defun desktop-settings-setup()
   (desktop-save-mode 1)
   (setq desktop-save t)
@@ -713,81 +791,7 @@
       (desktop-read desktop-dirname)))
 
 (add-hook 'after-init-hook 'desktop-settings-setup)
-;;; Yasnippet
-(require 'yasnippet)
-(lch-diminish yas-minor-mode " Ⓨ" " Y")
-(defvar snippet-root-dir (concat emacs-lib-dir "/snippets") "")
 
-;; Order matters, put lch at last to overwrite others' conf if there's name
-;; conflict.
-(defvar andrea-snippet-dir (concat snippet-root-dir "/AndreaCrotti") "")
-(defvar rejeep-snippet-dir (concat snippet-root-dir "/rejeep") "")
-(defvar lch-snippet-dir (concat snippet-root-dir "/lch") "")
-(defvar ocodo-snippet-dir (concat snippet-root-dir "/ocodo") "")
-
-(add-to-list 'yas-snippet-dirs rejeep-snippet-dir)
-(add-to-list 'yas-snippet-dirs andrea-snippet-dir)
-(add-to-list 'yas-snippet-dirs lch-snippet-dir)
-(add-to-list 'yas-snippet-dirs ocodo-snippet-dir)
-
-(yas-global-mode 1)
-;; has to disable under term-mode to make <tab> work.
-(defun lch-force-yasnippet-off ()
-  (yas-minor-mode -1)
-  (setq yas-dont-activate t))
-(add-hook 'lch-force-yasnippet-off
-              '(term-mode-hook shell-mode-hook))
-;; (add-hook 'term-mode-hook (lambda () (yas-minor-mode -1)))
-
-(defun lch-reload-snippets ()
-  (interactive)
-  (dolist (x yas-snippet-dirs)
-    (when (file-exists-p x)
-      (yas-load-directory x))))
-
-;; Better disable <tab>, otherwise conflict with terminal.
-;; (define-key yas-minor-mode-map [(tab)] nil)
-;; (define-key yas-minor-mode-map (kbd "TAB") nil)
-(define-key yas-minor-mode-map (kbd "M-'") 'yas-expand)
-
-;;; Auto-complete
-;; Disable it usually, for it's slow and distracting.
-;; Try dabbrev-expand (M-/)
-;; (require 'auto-complete)
-;; (require 'auto-complete-config)
-;; (require 'lch-key-util)
-;; (ac-config-default)
-;; (ac-flyspell-workaround)
-;; (add-to-list 'ac-dictionary-directories (concat emacs-var-dir "/auto-complete-dict"))
-;; (setq ac-comphist-file  (concat emacs-var-dir "/ac-comphist.dat"))
-
-;; (global-auto-complete-mode t)
-;; (setq ac-auto-show-menu t)
-;; (setq ac-dwim t)
-;; (setq ac-use-menu-map t)
-;; (setq ac-quick-help-delay 1)
-;; (setq ac-quick-help-height 60)
-;; (setq ac-disable-inline t)
-;; (setq ac-show-menu-immediately-on-auto-complete t)
-;; (setq ac-auto-start 2)
-;; (setq ac-candidate-menu-min 0)
-
-;; (set-default 'ac-sources
-;;              '(ac-source-dictionary
-;;                ac-source-words-in-buffer
-;;                ac-source-words-in-same-mode-buffers
-;;                ac-source-semantic
-;;                ac-source-yasnippet))
-
-;; (dolist (mode '(org-mode text-mode lisp-mode markdown-mode))
-;;   (add-to-list 'ac-modes mode))
-
-;; Key triggers
-;; (define-key ac-completing-map (kbd "M-.") 'ac-next)
-;; (define-key ac-completing-map (kbd "M-,") 'ac-previous)
-;; (define-key ac-completing-map "\t" 'ac-complete)
-;; (define-key ac-completing-map (kbd "M-RET") 'ac-help)
-;; (define-key ac-completing-map "\r" 'nil)
 
 ;;; PROVIDE
 (provide 'lch-elisp)

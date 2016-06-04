@@ -1,18 +1,44 @@
 ;;; -*- coding: utf-8 -*-
-(("/"
+(("/Users/LooChao/Dropbox/.emacs.d/var/"
+  (dired-filename . "/Users/LooChao/Dropbox/.emacs.d/var/breadcrumb"))
+ ("/Users/LooChao/"
+  (dired-filename . "/Users/LooChao/Mac_Backup_Log.txt"))
+ ("/Users/LooChao/Dropbox/.emacs.d/var/emacs.recentf" . 758)
+ ("/Users/LooChao/Dropbox/.emacs.d/var/emms/emms-history" . 158)
+ ("/Users/LooChao/Dropbox/.emacs.d/var/breadcrumb" . 344)
+ ("/Users/LooChao/Downloads/" . 73)
+ ("/Users/LooChao/.emacs.var/"
+  (dired-filename . "/Users/LooChao/.emacs.var/auto-save-list"))
+ ("/Users/LooChao/.emacs.var/auto-save-list/"
+  (dired-filename . "/Users/LooChao/.emacs.var/auto-save-list/LooChao"))
+ ("/Users/LooChao/.emacs.var/auto-save-list/LooChao/" . 96)
+ ("/Users/LooChao/.emacs.var/backup/"
+  (dired-filename . "/Users/LooChao/.emacs.var/backup/!Volumes!share!to Ji!Chao!Project02-v3!dp.py.~1~"))
+ ("/Users/LooChao/Dropbox/"
+  (dired-filename . "/Users/LooChao/Dropbox/Music"))
+ ("/Users/LooChao/Dropbox/.emacs.d/"
+  (dired-filename . "/Users/LooChao/Dropbox/.emacs.d/rc"))
+ ("/Users/LooChao/Dropbox/.emacs.d/rc/"
+  (dired-filename . "/Users/LooChao/Dropbox/.emacs.d/rc/lch-var.el"))
+ ("/Users/LooChao/.breadcrumb" . 344)
+ ("/Users/"
+  (dired-filename . "/Users/LooChao"))
+ ("/Users/LooChao/Dropbox/Org/org/iPrv.org" . 54167)
+ ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-ui.el" . 12392)
+ ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-dired.el" . 3176)
+ ("/Users/LooChao/Dropbox/.emacs.d/LOG.org" . 68)
+ ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-conf.el" . 504)
+ ("/Users/LooChao/Dropbox/.emacs.d/var/emacs-ido-last" . 9034)
+ ("/Users/LooChao/.ido.last" . 9034)
+ ("/Users/LooChao/Dropbox/.emacs.d/lisp/"
+  (dired-filename . "/Users/LooChao/Dropbox/.emacs.d/lisp/ace-jump-mode"))
+ ("/Users/LooChao/Dropbox/.emacs.d/lib/"
+  (dired-filename . "/Users/LooChao/Dropbox/.emacs.d/lib/elisp"))
+ ("/"
   (dired-filename . "/User Guides And Information"))
- ("/Users/LooChao/" . 1748)
- ("/Users/LooChao/.breadcrumb" . 345)
- ("/Users/LooChao/.ido.last" . 8577)
  ("/Users/LooChao/.spacemacs" . 12938)
  ("/Users/LooChao/.vagrant.d/data/machine-index/index" . 189)
  ("/Users/LooChao/.wine/dosdevices/z:/Volumes/DATA/Dropbox/Personal/Pharmaseq/passwd.txt" . 7)
- ("/Users/LooChao/Downloads/"
-  (dired-filename . "/Users/LooChao/Downloads/Feeb"))
- ("/Users/LooChao/Dropbox/"
-  (dired-filename . "/Users/LooChao/Dropbox/2015GT_Accounts"))
- ("/Users/LooChao/Dropbox/.emacs.d/"
-  (dired-filename . "/Users/LooChao/Dropbox/.emacs.d/rc"))
  ("/Users/LooChao/Dropbox/.emacs.d/.gitignore" . 3)
  ("/Users/LooChao/Dropbox/.emacs.d/bin/shell/docker-spacemacs.bash" . 820)
  ("/Users/LooChao/Dropbox/.emacs.d/elpa/"
@@ -24,30 +50,18 @@
  ("/Users/LooChao/Dropbox/.emacs.d/elpa/org-download-20151030.716/org-download-autoloads.el" . 416)
  ("/Users/LooChao/Dropbox/.emacs.d/etc/_bash_aliases" . 786)
  ("/Users/LooChao/Dropbox/.emacs.d/etc/_bashrc" . 4333)
- ("/Users/LooChao/Dropbox/.emacs.d/lib/"
-  (dired-filename . "/Users/LooChao/Dropbox/.emacs.d/lib/elisp"))
- ("/Users/LooChao/Dropbox/.emacs.d/lisp/"
-  (dired-filename . "/Users/LooChao/Dropbox/.emacs.d/lisp/ace-jump-mode"))
  ("/Users/LooChao/Dropbox/.emacs.d/lisp/org-download-20150414.1005/"
   (dired-filename . "/Users/LooChao/Dropbox/.emacs.d/lisp/org-download-20150414.1005/org-download-autoloads.el"))
- ("/Users/LooChao/Dropbox/.emacs.d/rc/"
-  (dired-filename . "/Users/LooChao/Dropbox/.emacs.d/rc/lch-custom.el"))
  ("/Users/LooChao/Dropbox/.emacs.d/rc/dotEmacs" . 3225)
  ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-binding.el" . 41289)
- ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-conf.el" . 426)
- ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-dired.el" . 11529)
- ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-elisp.el" . 569)
  ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-emms.el" . 7110)
  ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-env.el" . 1837)
  ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-init.el" . 2357)
  ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-org.el" . 151)
  ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-powerline-theme.el" . 4727)
- ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-ui.el" . 11799)
  ("/Users/LooChao/Dropbox/.emacs.d/rc/lch-util.el" . 6088)
- ("/Users/LooChao/Dropbox/.emacs.d/var/emacs.recentf" . 345)
- ("/Users/LooChao/Dropbox/.emacs.d/var/emms/emms-history" . 158)
  ("/Users/LooChao/Dropbox/.emacs.dz/"
-  (dired-filename . "/Users/LooChao/Dropbox/.emacs.dz/spacemacs"))
+  (dired-filename . "/Users/LooChao/Dropbox/.emacs.dz/deepin"))
  ("/Users/LooChao/Dropbox/.emacs.dz/_spacemacs" . 2852)
  ("/Users/LooChao/Dropbox/.emacs.dz/lch-spacemacs.el" . 456)
  ("/Users/LooChao/Dropbox/.emacs.dz/spacemacs_not.in.use/"
@@ -91,7 +105,6 @@
  ("/Users/LooChao/Dropbox/Org/org/Programming.org" . 9808)
  ("/Users/LooChao/Dropbox/Org/org/Travel.org" . 15393)
  ("/Users/LooChao/Dropbox/Org/org/Vagrant.org" . 5275)
- ("/Users/LooChao/Dropbox/Org/org/iPrv.org" . 54167)
  ("/Users/LooChao/Dropbox/Org/org/iPrv.org_archive" . 192571)
  ("/Users/LooChao/Dropbox/Research/FPO/Slides/"
   (dired-filename . "/Users/LooChao/Dropbox/Research/FPO/Slides/diagram"))

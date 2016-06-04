@@ -1,0 +1,63 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/LooChao/Dropbox/" . ".chrome.d/")
+ ("/Users/LooChao/VMRoot/" . "WINDOWS7/")
+ ("/Users/LooChao/" . "VMRoot/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/LooChao/VMRoot/WINDOWS7/"
+ "/Users/LooChao/VMRoot/ARCHLINUX2/"
+ "/Users/LooChao/VMRoot/ARCHLINUX/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "Vagrantfile"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/LooChao/Downloads/" (22351 26625 0 0) "Emacs2/" "Emacs.app/" "Emacs-pretest-25.0.94-universal.dmg" "Emacs-24.5-1-universal.dmg" ".DS_Store" "../" "./")
+
+ ("/Users/LooChao/Dropbox/.emacs.dz/" (22300 31527 0 0) "xah/" "spacemacs_not.in.use/" "spacemacs/" "purcell/" "oremacs/" "live/" "lch-spacemacs.el" "deepin/" "_spacemacs_orig" "_spacemacs_bb" "_spacemacs_bak2" "_spacemacs_bak1" "_spacemacs_bak" "_spacemacs" ".spacemacs" ".emacs" "../" "./")
+
+ ("/Users/LooChao/Dropbox/.chrome.d/" (21755 27411 0 0) "../" "./")
+
+ ("/Users/LooChao/Dropbox/" (22335 6151 0 0) "Workspace/" "Work/" "Wallpaper/" "Unix/" "Temporary/" "Share/" "Screenshots/" "Scan/" "Research/" "Reader/" "Public/" "Programs/" "Program_V/" "Program_Collections/" "Print/" "Port/" "Pictures/" "Piano/" "Photoshop/" "Photos/" "Photo_Notes/" "Pharmaseq/" "Personal/" "PDFNotes/" "Org/" "Notes/" "Music_B/" "Music/" "MobileOrg/" "Miami/" "ls.exe.stackdump" "Library/" "Java&J2EE.zip" "Information/" "Icon
+" "Github/" "Evernote/" "Elmer/" "Education/" "Download/" "Documents/" "Devon/" "Comic/" "Code_Tutorial/" "Code_C/" "Code_B/" "Code/" "Cloud/" "Career/" "Camera Uploads/" "Calibre/" "Apps/" "Applications/" "_ToMBP/" "_text.expander.d/" "_mac.d/" "_kbd.maestro.lib/" "_kbd.maestro.d/" ".vimperator.d/" ".vim.d/" ".vagrant.d/" ".spacemacs.d/" ".popclip.d/" ".pentadactyl.d_bak/" ".pentadactyl.d/" ".firefox.d/" ".emacs.lib/" ".emacs.dz/" ".emacs.d-lch-surface/" ".emacs.d-dev-pc/" ".emacs.d/" ".DS_Store" ".dropbox.cache/" ".dropbox" ".doc.lib/" ".chrome_bak/" ".chrome.d_debian/" ".chrome.d/" ".alfred2/" "../" "./")
+
+ ("/Users/LooChao/Dropbox/.emacs.d/" (22325 50057 0 0) "var/" "url/" "tramp" "server/" "rc/" "LOG.org" "lisp/" "LICENSE.md" "lib/" "info/" "etc/" "elpa/" "bin/" "archive/" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/LooChao/Dropbox/.emacs.d/rc/" (22325 54770 0 0) "lch-web.el" "lch-w32.el" "lch-viper.el" "lch-var.el" "lch-util.el" "lch-ui.el" "lch-powerline-theme.el" "lch-pgm.el" "lch-ox.el" "lch-org.el" "lch-one-key.el" "lch-network.el" "lch-mac.el" "lch-lab.el" "lch-init.el" "lch-inbox.el" "lch-ibuffer.el" "lch-hydra.el" "lch-helm.el" "lch-evil.el" "lch-env.el" "lch-emms.el" "lch-elisp.el" "lch-dired.el" "lch-custom.el" "lch-conf.el" "lch-coding.el" "lch-bmk.el" "lch-binding.el" "lch-auto-complete.el" "lch-aquamacs.el" "lch-aqua-custom.el" "dotEmacs" "color-theme-loochao.el" "color-theme-lazycat.el" "#lch-ui.el#" "../" "./")
+
+ ("/Users/LooChao/" (22323 29647 0 0) "百度云同步盘/" "VMRoot/" "VirtualBox VMs/" "vimperator/" "Temporary/" "Sites/" "Public/" "Pictures/" "nltk_data/" "News/" "Music/" "Movies/" "Mail/" "Mac_Version.txt" "LooChao/" "Library/" "Google Drive/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Cloud/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zlogin" ".y4" ".xnviewmp/" ".Xcode/" ".Xauthority" ".wine/" ".w3m/" ".vuescanrc" ".viper" ".vimviews/" ".vimundo/" ".vimswap/" ".vimrc.bundles" ".vimrc" ".vimperatorrc" ".vimperator/" ".viminfo" ".vimbackup/" ".vim/" ".vagrant.d/" ".Trash/" ".transifexrc" ".texlive2014/" ".texlive2012/" ".texlive2011/" ".texlive2010/" ".Synology/" ".subversion/" ".ssh/" ".srecode/" ".spacemacs_bak" ".spacemacs.d/" ".spacemacs" ".smex-items" ".sh_history" ".serverauth.62732" ".serverauth.35619" ".rvm/" ".rstudio-desktop/" ".ropeproject/" ".rnd" ".Rhistory" ".python_history" ".python-eggs/" ".putty/" ".profile" ".pps/" ".pip/" ".pentadactylrc" ".pentadactyl/" ".nevernote/" ".neocon/" ".mysql_history" ".mplayer/" ".mkshrc" ".matplotlib/" ".matlab/" ".macports/" ".local/" ".lesshst" ".irb_history" ".irb-history" ".ipython_history" ".ipython/" ".InstallAnywhere/" ".inputrc" ".inkscape-etc/" ".ido.last" ".idm/" ".goldendict/" ".gnus" ".gnupg/" ".gnome2/" ".gmshrc" ".gitk" ".gitconfig" ".gem/" ".geeknote/" ".gdb_history" ".freemind/" ".fontconfig/" ".filezilla/" ".evernote-mode/" ".eshell/" ".emacs.var/" ".emacs.d/" ".emacs" ".elfeed/" ".DS_Store" ".dropbox/" ".docker/" ".distlib/" ".datathief/" ".cvspass" ".cups/" ".cpan/" ".config/" ".CloudStation/" ".CFUserTextEncoding" ".cache/" ".breadcrumb" ".bm-repository" ".beaTunes-gc.log" ".bashrc" ".bash_profile" ".bash_history" ".bash_aliases" ".aspell.en.pws" ".aspell.en.prepl" ".android/" ".adobe/" "../" "./")
+
+ ("/Users/LooChao/VMRoot/WINDOWS7/" (22304 13100 0 0) "../" "./")
+
+ ("/Users/LooChao/VMRoot/" (22304 54326 0 0) "WINDOWSXP/" "WINDOWS7/" "UBUNTU/" "DEBIAN/" "ARCHLINUX/" ".DS_Store" "../" "./")
+
+ ("/Users/LooChao/VMRoot/WINDOWSXP/" (22260 13215 0 0) "Vagrantfile" ".vagrant/" ".DS_Store" "../" "./")
+
+ ("/Users/LooChao/VMRoot/ARCHLINUX2/" (22304 52981 0 0) "../" "./")
+
+ ("/Users/LooChao/VMRoot/ARCHLINUX/" (22218 13196 0 0) "Vagrantfile" "mirrorlist" ".vagrant/" "../" "./")
+
+ ("/Users/LooChao/Dropbox/Org/" (21682 14683 0 0) "WiKi/" "style/" "Scratch/" "public_html/" "org/" ".org-timestamps/" ".DS_Store" "../" "./")
+
+ ("/Users/LooChao/Dropbox/Org/org/" (22282 27656 0 0) "Zhihu.org" "Yale.org" "Vagrant.org" "USLife.org" "Unix.org" "Unix/" "Travel.org" "Tianchao.org" "THUVeteran.org" "Sports.org" "Softip.org" "Society.org" "Soccer.org" "Sitemap.org" "Science.org" "Ruby.org" "Ruby/" "Refile.org" "Python.org" "Programming.org" "Private.org" "Politics.org" "Photography.org" "Philosophy.org" "Pharmaseq.org" "Pharmaseq/" "Perl.org" "People.org" "Pearl1.org" "Pearl.org" "Music.org" "Movie.org" "Miscellaneous.org" "Military.org" "Miami.org" "Methodology.org_archive" "Methodology.org" "Mathematics.org" "Macintosh.org" "Lovetip.org" "Lifetip.org" "Life.org" "Leetcode.org" "iPrv.org_archive" "iPrv.org" "Interview.org" "index.org" "index.html" "iJournal.org" "Humor.org" "History.org" "Hardware.org" "Hack.org" "Finance/" "Fiction.org" "Feebs.org" "Family.org" "English.org" "Emacs.org" "Emacs/" "Elmer.org" "ElectricalSE.org" "Economy.org" "Culture.org" "Culture/" "Cookery.org" "ComputerSE.org_archive" "ComputerSE.org" "Children.org" "Career.org" "Calculations.org" "Bookmark.org" "Bib-Edu.org" "Automobile.org" "Art-Ent.org" "Agenda/" "15GT.org" "15GT-Hotel.org" ".git/" ".DS_Store" ".#Humor.org" ".#Hardware.org" "#Humor.org#" "#Hardware.org#" "#Cookery.org#" "../" "./")
+
+ ("/Volumes/DATA/Personal/THUVeteran/www.tsinghuaveterans.com/" (22227 32783 0 0) "videos.html" "studio.html" "recs.html" "printables.html" "policies.html" "photos.html" "philosophy.html" "news.html" "links.html" "js/" "interview.html" "index.html" "img/" "fonts/" "font/" "favicon.ico" "FAQ_bak.html" "Emily.html" "css/" "contact.html" ".DS_Store" "../" "./")
+
+ ("/Users/LooChao/LooChao/" (22278 44174 0 0) "百度云同步盘/" "VMRoot/" "VirtualBox VMs/" "vimperator/" "Temporary/" "Sites/" "Public/" "Pictures/" "nltk_data/" "News/" "Music/" "Movies/" "Mail/" "Mac_Version.txt" "LooChao/" "Library/" "Google Drive/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Cloud/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zlogin" ".y4" ".xnviewmp/" ".Xcode/" ".Xauthority" ".wine/" ".w3m/" ".vuescanrc" ".viper" ".vimviews/" ".vimundo/" ".vimswap/" ".vimrc.bundles" ".vimrc" ".vimperatorrc" ".vimperator/" ".viminfo" ".vimbackup/" ".vim/" ".vagrant.d/" ".Trash/" ".transifexrc" ".texlive2014/" ".texlive2012/" ".texlive2011/" ".texlive2010/" ".Synology/" ".subversion/" ".ssh/" ".srecode/" ".spacemacs_bak" ".spacemacs.d/" ".spacemacs" ".smex-items" ".sh_history" ".serverauth.62732" ".serverauth.35619" ".rvm/" ".rstudio-desktop/" ".ropeproject/" ".rnd" ".Rhistory" ".python_history" ".python-eggs/" ".putty/" ".profile" ".pps/" ".pip/" ".pentadactylrc" ".pentadactyl/" ".nevernote/" ".neocon/" ".mysql_history" ".mplayer/" ".mkshrc" ".matplotlib/" ".matlab/" ".macports/" ".local/" ".lesshst" ".irb_history" ".irb-history" ".ipython_history" ".ipython/" ".InstallAnywhere/" ".inputrc" ".inkscape-etc/" ".idm/" ".goldendict/" ".gnus" ".gnupg/" ".gnome2/" ".gmshrc" ".gitk" ".gitconfig" ".gem/" ".geeknote/" ".gdb_history" ".freemind/" ".fontconfig/" ".filezilla/" ".evernote-mode/" ".eshell/" ".emacs.var/" ".emacs.d/" ".emacs" ".elfeed/" ".DS_Store" ".dropbox/" ".docker/" ".distlib/" ".datathief/" ".cvspass" ".cups/" ".cpan/" ".config/" ".CloudStation/" ".CFUserTextEncoding" ".cache/" ".breadcrumb" ".bm-repository" ".beaTunes-gc.log" ".bashrc" ".bash_profile" ".bash_history" ".bash_aliases" ".aspell.en.pws" ".aspell.en.prepl" ".android/" ".adobe/" "../" "./")
+
+ ("/Users/LooChao/.vagrant.d/" (22278 44692 0 0) "tmp/" "setup_version" "rgloader/" "insecure_private_key" "gems/" "data/" "boxes/" ".vagrant/" ".DS_Store" "../" "./")
+
+ ("/Users/LooChao/.vagrant.d/tmp/" (22278 44681 0 0) "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

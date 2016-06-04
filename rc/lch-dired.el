@@ -95,7 +95,8 @@
                               (progn
                                 (require 'dired-extension)
                                 (dired-omit-method)
-                                (lambda () (dired-hide-details-mode -1)))))
+                                (dired-hide-details-mode -1))))
+
 ;; Terminal
 (define-key dired-mode-map (kbd "`") 'dired-open-term)
 (defun dired-open-term ()
