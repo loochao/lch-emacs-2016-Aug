@@ -96,6 +96,9 @@
  ((string= (system-name) "LCH-SURFACE")
   (defvar emacs-dir (concat emacs-path "/.emacs.d-lch-surface"))
   (setq user-emacs-directory (concat emacs-dir "/")))
+ ((string= (system-name) "LCH-WINDOWS-PT")
+  (defvar emacs-dir (concat emacs-path "/.emacs.d-lch-surface"))
+  (setq user-emacs-directory (concat emacs-dir "/")))
  (t
   (defvar emacs-dir (concat emacs-path "/.emacs.d"))
   (setq user-emacs-directory (concat emacs-dir "/"))))
